@@ -1,0 +1,56 @@
+<form method="POST" id="add_user" autocomplete="off">
+    <div class="row">
+        <div class="col-md-12 col-lg-6 col-sm-12 mb-2">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control" placeholder="Nama lengkap">
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6 col-sm-12 mb-2">
+            <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text" name="mobile" class="form-control" placeholder="nomor telepon">
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-12 col-sm-12 mb-2">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="form-control" placeholder="email@mail.com">
+            </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-6 col-sm-6 mb-2">
+            <h6>Gender : </h6>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="gender" value="male" class="form-check-input">
+                <label for="male" class="form-check-label">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                    <input type="radio" name="gender" value="female" class="form-check-input">
+                    <label for="female" class="form-check-label">Female</label>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-6 col-sm-6 mb-2">
+            <h6>Status : </h6>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="status" value="active" class="form-check-input">
+                    <label for="active" class="form-check-label">Active</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="status" value="inactive" class="form-check-input">
+                    <label for="inactive" class="form-check-label">Inactive</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-12 col-sm-12 col-lg-6 d-grid gap-2 d-lg-block">
+            <button class="btn btn-success">
+                Submit
+            </button>
+    </div>
+    </div>
+</form>
