@@ -1,18 +1,32 @@
+<% for(var i=0; i < users.length; ++i) {%>
 <tr>
-    <td>1</td>
-    <td>Username</td>
-    <td>example@mail.com</td>
-    <td>Male</td>
-    <td>0000-0000-000</td>
-    <td>Active</td>
+    <td>
+        <%= i + 1 %>
+    </td>
+    <td>
+        <%= users[i].name %>
+    </td>
+    <td>
+        <%= users[i].email %>
+    </td>
+    <td>
+        <%= users[i].gender %>
+    </td>
+    <td>
+        <%= users[i].mobile %>
+    </td>
+    <td>
+        <%= users[i].status %>
+    </td>
     <td>
         <div class="row">
             <div class="col-md-12 col-lg-6 col-sm-12 d-grid">
-                <a href="/update-user" class="btn btn-info btn-sm mb-2">Update</a>
+                <a href="/update-user?id=<%= users[i]._id %>" class="btn btn-info btn-sm mb-2">Update</a>
             </div>
             <div class="col-md-12 col-lg-6 col-sm-12 d-grid">
-                <a href="#" class="btn btn-danger btn-sm mb-2">Update</a>
+                <a data-id="<%= users[i]._id %>" class="delete btn btn-danger btn-sm mb-2">Delete</a>
             </div>
         </div>
     </td>
 </tr>
+<% } %>

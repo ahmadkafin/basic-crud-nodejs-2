@@ -29,31 +29,32 @@
                             <div class="row">
                                 <div class="col-md-12 col-lg-6 col-sm-12 mb-2">
                                     <div class="form-group">
+                                        <input type="hidden" name="id" value="<%= user._id %>">
                                         <label for="name">Name</label>
-                                        <input type="text" name="name" class="form-control" placeholder="Nama lengkap">
+                                        <input type="text" name="name" class="form-control" placeholder="Nama lengkap" value="<%= user.name %>">
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-lg-6 col-sm-12 mb-2">
                                     <div class="form-group">
                                         <label for="mobile">Mobile</label>
-                                        <input type="text" name="mobile" class="form-control" placeholder="nomor telepon">
+                                        <input type="text" name="mobile" class="form-control" placeholder="nomor telepon" value="<%= user.mobile %>">
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-lg-12 col-sm-12 mb-2">
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input type="text" name="email" class="form-control" placeholder="email@mail.com">
+                                        <input type="text" name="email" class="form-control" placeholder="email@mail.com" value="<%= user.email %>">
                                     </div>
                                 </div>
                                 
                                 <div class="col-md-6 col-lg-6 col-sm-6 mb-2">
                                     <h6>Gender : </h6>
                                     <div class="form-check form-check-inline">
-                                        <input type="radio" name="gender" value="male" class="form-check-input">
+                                        <input type="radio" name="gender" value="Male" class="form-check-input" <%=user.gender==='Male' ? 'checked' : '' %>>
                                         <label for="male" class="form-check-label">Male</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                            <input type="radio" name="gender" value="female" class="form-check-input">
+                                            <input type="radio" name="gender" value="Female" class="form-check-input" <%=user.gender==='Female' ? 'checked' : '' %>>
                                             <label for="female" class="form-check-label">Female</label>
                                     </div>
                                 </div>
@@ -62,11 +63,12 @@
                                     <h6>Status : </h6>
                                     <div class="form-group">
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" name="status" value="active" class="form-check-input">
+                                            <input type="radio" name="status" value="Active" class="form-check-input" <%=user.status==='Active' ? 'checked' : '' %>>
                                             <label for="active" class="form-check-label">Active</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input type="radio" name="status" value="inactive" class="form-check-input">
+                                            <input type="radio" name="status" value="Inactive" class="form-check-input" <%=user.status==='Inactive' ? 'checked' : ''
+                                                %>>
                                             <label for="inactive" class="form-check-label">Inactive</label>
                                         </div>
                                     </div>
